@@ -81,6 +81,15 @@
             <q-item-label caption>@QuasarFramework</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item clickable tag="a" target="_blank" href="http://localhost:8080/#/playground">
+          <q-item-section avatar>
+            <q-icon name="public" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>playground</q-item-label>
+            <q-item-label caption>@QuasarFramework</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
