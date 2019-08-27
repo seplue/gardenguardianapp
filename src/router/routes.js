@@ -18,7 +18,7 @@ const routes = [
     path: '/test_latest',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Test_latest.vue') }
+      { path: '', component: () => import('pages/test_latest.vue') }
     ]
   }
 ]

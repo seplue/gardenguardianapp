@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" >
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Quasar App
+          GardenGuardian
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -81,18 +81,25 @@
             <q-item-label caption>@QuasarFramework</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="http://localhost:8080/#/playground">
+        <q-item clickable @click="$router.push('/playground')">
           <q-item-section avatar>
             <q-icon name="public" />
           </q-item-section>
           <q-item-section>
             <q-item-label>playground</q-item-label>
-            <q-item-label caption>@QuasarFramework</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item clickable @click="$router.push('/test_latest')">
+          <q-item-section avatar>
+            <q-icon name="local_florist" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>test_latest</q-item-label>
+          </q-item-section>
+        </q-item>
+
       </q-list>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
