@@ -14,11 +14,14 @@
       </div>
 
     </div>
+    <q-btn color="primary" @click="getTest">getTest()</q-btn>
+    {{this.res}}
   </div>
 </template>
 
 <script>
 const axios = require('axios')
+// const serverAddress = 'http://192.168.1.11:5000'
 export default {
   name: 'Test_latest',
   data () {
@@ -31,6 +34,17 @@ export default {
     this.timer = setInterval(this.fetchMeasurements, 5000)
   },
   methods: {
+    getTest: function () {
+      axios
+        .get('http://192.168.1.11:5000/get_test')
+        .then(response => {
+          this.res = response
+          console.log(this.res)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
     fetchMeasurements: function () {
       axios
         .get('http://kornspeicher94.internet-box.ch:31500/test_latest')
